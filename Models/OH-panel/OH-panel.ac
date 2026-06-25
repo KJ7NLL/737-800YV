@@ -6459,7 +6459,7 @@ OBJECT poly
 name "Cross_Feed"
 loc 0.77407 1.49283 0.264091
 data 11
-Círculo.001
+Cï¿½rculo.001
 texture "crossfeed.png"
 crease 35.000000
 numvert 72
