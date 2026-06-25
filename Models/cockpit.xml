@@ -30,10 +30,12 @@
         <name>overhead</name>
         <path>Overhead/Overhead.xml</path>
 		<offsets>
-		<x-m>0.86836</x-m>
-		<y-m>-0.0236</y-m>
-		<z-m>1.58936</z-m>
-		<pitch-deg>155.968</pitch-deg>
+		<x-m>0.35836</x-m>
+		<y-m>-0.0</y-m>
+		<z-m>1.30936</z-m>
+		<pitch-deg>90</pitch-deg>
+		<heading-deg>0</heading-deg>
+		<roll-deg>90</roll-deg>
 		</offsets>
       </model> 
       <model>
