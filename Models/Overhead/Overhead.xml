@@ -94,7 +94,7 @@
 	<!-- Battery Cover/Switch -->
 	<animation>
 		<type>pick</type>
-		<object-name>batt-cover</object-name>       
+		<object-name>thumbler cover small.002</object-name>       
 		<action>
 			<button>0</button>
 			<repeatable type="bool">false</repeatable>     
@@ -118,22 +118,23 @@
 	
 	<animation>
 		<type>rotate</type>   
-		<object-name>batt-cover</object-name>  
+		<object-name>thumbler cover small.002</object-name>  
 		<property>controls/OH/batt-cover</property>
 		<factor>-60</factor>
 		<center>
-			<x-m>-0.11915</x-m>
-			<y-m>0</y-m>
-			<z-m>0.08976</z-m>
+			<x-m>-0.111504</x-m>
+			<y-m>0.233139</y-m>
+			<z-m>0.564292</z-m>
 		</center>
 		<axis>
-			<y>1</y>
+			<y>0.4067366430758</y>
+			<z>0.913545457642601</z>
 		</axis>
 	</animation>
 	
 	<animation>
 		<type>pick</type>
-		<object-name>batt-switch</object-name>       
+		<object-name>thumbler long.070</object-name>       
 		<action>
 			<button>0</button>
 			<repeatable type="bool">false</repeatable>     
@@ -152,26 +153,33 @@
 	
 	<animation>
 		<type>rotate</type>   
-		<object-name>batt-switch</object-name>  
+		<object-name>thumbler long.070</object-name>  
 		<property>controls/electric/battery-switch</property>
+		<binding>
+		  <command>property-interpolate</command>
+		  <property>controls/electric/battery-switch</property>
+		  <value type="double">10</value>
+		  <rate>0.5</rate><!-- 2 seconds to 0 from 1 or -1 -->
+		</binding>
 		<interpolation>
-			<entry><ind>0</ind><dep>-30</dep></entry>
-			<entry><ind>1</ind><dep> 30</dep></entry>
+			<entry><ind>0</ind><dep>-50</dep></entry>
+			<entry><ind>1</ind><dep> 10</dep></entry>
 		</interpolation>
 		<center>
-			<x-m>-0.09419</x-m>
-			<y-m>0</y-m>
-			<z-m>0.08976</z-m>
+			<x-m>-0.103507</x-m>
+			<y-m>0.230184</y-m>
+			<z-m>0.565158</z-m>
 		</center>
 		<axis>
-			<y>1</y>
+			<y>0.4067366430758</y>
+			<z>0.913545457642601</z>
 		</axis>
 	</animation>
 	
 	<!-- External Power -->
 	<animation>
 		<type>select</type>
-		<object-name>GRDpw.on</object-name>
+		<object-name>thumbler long.045</object-name>
 		<condition>
 			<equals>
 				<property>services/ext-pwr/enable</property>
@@ -182,7 +190,7 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>GRDpw.off</object-name>
+		<object-name>thumbler long.045</object-name>
 		<condition>
 			<equals>
 				<property>services/ext-pwr/enable</property>
@@ -193,7 +201,7 @@
 	
 	<animation>
 		<type>pick</type>
-		<object-name>grdpwr-switch</object-name>       
+		<object-name>thumbler long.045</object-name>       
 		<action>
 			<button>0</button>
 			<repeatable type="bool">false</repeatable>     
@@ -206,16 +214,16 @@
 	
 	<animation>
 		<type>rotate</type>   
-		<object-name>grdpwr-switch</object-name>  
+		<object-name>thumbler long.045</object-name>  
 		<property>controls/electrical/ext/sw</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>-30</dep></entry>
 			<entry><ind>1</ind><dep> 30</dep></entry>
 		</interpolation>
 		<center>
-			<x-m>0.07664</x-m>
+			<x-m>0</x-m>
 			<y-m>0</y-m>
-			<z-m>0.07776</z-m>
+			<z-m>0</z-m>
 		</center>
 		<axis>
 			<y>1</y>
@@ -230,7 +238,7 @@
 
 <animation>
   <type>pick</type>
-  <object-name>logolight</object-name>         
+  <object-name>thumbler long.060</object-name>         
   <visible>1</visible>
   <action>
    <button>0</button>
@@ -247,17 +255,17 @@
 </animation> 
 <animation>
   <type>rotate</type>   
-  <object-name>logolight</object-name>   
+  <object-name>thumbler long.060</object-name>   
   <property>controls/lighting/logo-lights</property>
-  <factor>30</factor>
+  <factor>50</factor>
   <center>
-    <x-m>0.29527</x-m>
-    <y-m>0.15926</y-m>
-    <z-m>0.07838</z-m>
+    <x-m>0.15481</x-m>
+    <y-m>0.094413</y-m>
+    <z-m>0.251439</z-m>
   </center>
   <axis>
-    <x>0</x>
-    <y>1</y>
+    <x>1</x>
+    <y>0</y>
     <z>0</z>
   </axis>
 </animation>
@@ -266,7 +274,7 @@
 
 <animation>
   <type>pick</type>
-  <object-name>strobelight</object-name>         
+  <object-name>thumbler long.061</object-name>         
   <visible>1</visible>
   <action>
     <button>0</button>
@@ -287,9 +295,9 @@
 </animation>
 
 <animation>
-  <type>rotate</type>   
-  <object-name>strobelight</object-name>  
-  <property>controls/lighting/strobe</property>     
+  <type>rotate</type>
+  <object-name>thumbler long.061</object-name>
+  <property>controls/lighting/strobe</property>
   <factor>30</factor>
   <center>
    <x-m>0.29527</x-m>
@@ -307,7 +315,7 @@
 
 <animation>
   <type>pick</type>
-  <object-name>anticollight</object-name>         
+  <object-name>thumbler long.062</object-name>         
   <visible>1</visible>
   <action>
    <button>0</button>
@@ -324,17 +332,17 @@
 </animation> 
 <animation>
   <type>rotate</type>   
-  <object-name>anticollight</object-name>    
+  <object-name>thumbler long.062</object-name>    
   <property>controls/lighting/beacon</property>
-  <factor>30</factor>
+  <factor>50</factor>
   <center>
-    <x-m>0.29304</x-m>
-    <y-m>0.21817</y-m>
-    <z-m>0.07853</z-m>
+    <x-m>0.223975</x-m>
+    <y-m>0.094413</y-m>
+    <z-m>0.251439</z-m>
   </center>
   <axis>
-    <x>0</x>
-    <y>1</y>
+    <x>1</x>
+    <y>0</y>
     <z>0</z>
   </axis>
 </animation>
@@ -343,7 +351,7 @@
 
 <animation>
   <type>pick</type>
-  <object-name>winglight</object-name>         
+  <object-name>thumbler long.063</object-name>         
   <visible>1</visible>
   <action>
    <button>0</button>
@@ -360,17 +368,17 @@
 </animation> 
 <animation>
   <type>rotate</type>   
-  <object-name>winglight</object-name>  
+  <object-name>thumbler long.063</object-name>  
   <property>controls/lighting/wing</property>
-  <factor>30</factor>
+  <factor>50</factor>
   <center>
-    <x-m>0.29363</x-m>
-    <y-m>0.24066</y-m>
-    <z-m>0.07866</z-m>
+    <x-m>0.250136</x-m>
+    <y-m>0.094413</y-m>
+    <z-m>0.251439</z-m>
   </center>
   <axis>
-    <x>0</x>
-    <y>1</y>
+    <x>1</x>
+    <y>0</y>
     <z>0</z>
   </axis>
 </animation>
@@ -379,7 +387,7 @@
 
 <animation>
   <type>pick</type>
-  <object-name>wheellight</object-name>         
+  <object-name>thumbler long.064</object-name>         
   <visible>1</visible>
   <action>
    <button>0</button>
@@ -396,17 +404,17 @@
 </animation> 
 <animation>
   <type>rotate</type>   
-  <object-name>wheellight</object-name>   
+  <object-name>thumbler long.064</object-name>   
   <property>controls/lighting/wheel</property>
-  <factor>30</factor>
+  <factor>50</factor>
   <center>
-    <x-m>0.29363</x-m>
-    <y-m>0.26437</y-m>
-    <z-m>0.07863</z-m>
+    <x-m>0.277422</x-m>
+    <y-m>0.094413</y-m>
+    <z-m>0.251439</z-m>
   </center>
   <axis>
-    <x>0</x>
-    <y>1</y>
+    <x>1</x>
+    <y>0</y>
     <z>0</z>
   </axis>
 </animation>
@@ -415,7 +423,7 @@
 
 <animation>
   <type>pick</type>
-  <object-name>APUswitch</object-name>         
+  <object-name>thumbler long.068</object-name>         
   <visible>1</visible>
   <action>
    <button>0</button>
@@ -450,17 +458,17 @@
 </animation> 
 <animation>
   <type>rotate</type>
-  <object-name>APUswitch</object-name>    
+  <object-name>thumbler long.068</object-name>    
   <property>controls/APU/master</property>
   <factor>20</factor>
   <center>
-    <x-m>0.30606</x-m>
-    <y-m>-0.07188</y-m>
-    <z-m>0.07869</z-m>
+    <x-m>-0.072304</x-m>
+    <y-m>0.090123</y-m>
+    <z-m>0.241804</z-m>
   </center>
   <axis>
-    <x>0</x>
-    <y>1</y>
+    <x>1</x>
+    <y>0</y>
     <z>0</z>
   </axis>
 </animation>
@@ -469,7 +477,7 @@
 
  <animation>
         <type>pick</type>
-        <object-name>RNYTurnL</object-name>         
+        <object-name>thumbler long.066</object-name>         
         <visible>1</visible>
         <action>
          <button>0</button>
@@ -486,23 +494,23 @@
     </animation> 
   <animation>
       <type>rotate</type>   
-        <object-name>RNYTurnL</object-name>  
+        <object-name>thumbler long.066</object-name>  
             <property>controls/lighting/RB-light</property>
-      <factor>30</factor>
+      <factor>50</factor>
       <center>
-          <x-m>0.29368</x-m>
-          <y-m>-0.15291</y-m>
-          <z-m>0.07908</z-m>
+          <x-m>-0.149626</x-m>
+          <y-m>0.094413</y-m>
+          <z-m>0.251439</z-m>
       </center>
       <axis>
-          <x>0</x>
-          <y>1</y>
+          <x>1</x>
+          <y>0</y>
           <z>0</z>
       </axis>
   </animation>
   <animation>
         <type>pick</type>
-        <object-name>RNYTurnR</object-name>         
+        <object-name>thumbler long.065</object-name>         
         <visible>1</visible>
         <action>
          <button>0</button>
@@ -519,17 +527,17 @@
     </animation> 
   <animation>
       <type>rotate</type>   
-        <object-name>RNYTurnR</object-name>  
+        <object-name>thumbler long.065</object-name>  
             <property>controls/lighting/RB-light</property>
-      <factor>30</factor>
+      <factor>50</factor>
       <center>
-          <x-m>0.29368</x-m>
-          <y-m>-0.12799</y-m>
-          <z-m>0.07901</z-m>
+          <x-m>-0.121522</x-m>
+          <y-m>0.094413</y-m>
+          <z-m>0.251439</z-m>
       </center>
       <axis>
-          <x>0</x>
-          <y>1</y>
+          <x>1</x>
+          <y>0</y>
           <z>0</z>
       </axis>
   </animation>
@@ -538,7 +546,7 @@
 
   <animation>
         <type>pick</type>
-        <object-name>taxilight</object-name>         
+        <object-name>thumbler long.067</object-name>         
         <visible>1</visible>
         <action>
          <button>0</button>
@@ -555,17 +563,17 @@
     </animation> 
   <animation>
       <type>rotate</type>   
-        <object-name>taxilight</object-name>  
+        <object-name>thumbler long.067</object-name>  
             <property>controls/lighting/Taxi-light</property>
-      <factor>30</factor>
+      <factor>50</factor>
       <center>
-          <x-m>0.29370</x-m>
-          <y-m>-0.10297</y-m>
-          <z-m>0.07908</z-m>
+          <x-m>-0.094332</x-m>
+          <y-m>0.094413</y-m>
+          <z-m>0.251439</z-m>
       </center>
       <axis>
-          <x>0</x>
-          <y>1</y>
+          <x>1</x>
+          <y>0</y>
           <z>0</z>
       </axis>
   </animation>
@@ -574,7 +582,7 @@
 
  <animation>
 	<type>knob</type>
-	<object-name>landinglight1</object-name>
+	<object-name>thumbler landing lights.004</object-name>
 	<property>controls/lighting/landing-lights</property>
 	<factor>-25</factor>
 	<cursor>hand</cursor>
@@ -589,18 +597,18 @@
       </binding>
 	</action>
 	<center>
-          <x-m>0.29324</x-m>
-          <y-m>-0.25429</y-m>
-          <z-m>0.07945</z-m>
+          <x-m>-0.2157</x-m>
+          <y-m>0.0909</y-m>
+          <z-m>0.2528</z-m>
       </center>
 	<axis>
-		<y>-1</y>
+		<x>-1</x>
 	</axis>
 </animation>
 
 <animation>
 	<type>knob</type>
-	<object-name>landinglight2</object-name>
+	<object-name>thumbler landing lights.005</object-name>
 	<property>controls/lighting/landing-lights</property>
 	<factor>-25</factor>
 	<cursor>hand</cursor>
@@ -615,15 +623,17 @@
       </binding>
 	</action>
 	<center>
-          <x-m>0.29324</x-m>
-          <y-m>-0.23272</y-m>
-          <z-m>0.07868</z-m>
+          <x-m>-0.194182</x-m>
+          <y-m>0.090908</y-m>
+          <z-m>0.252832</z-m>
       </center>
 	<axis>
-		<y>-1</y>
+		<x>-1</x>
 	</axis>
 </animation>
 
+<!-- OLD landing lights below -->
+<!--
 <animation>
 	<type>knob</type>
 	<object-name>landinglight3</object-name>
@@ -675,12 +685,13 @@
 		<y>-1</y>
 	</axis>
 </animation>
+-->
 
 <!--No Smoking-->
 
 <animation>
   <type>pick</type>
-  <object-name>nosmoking</object-name>         
+  <object-name>thumbler long.004</object-name>         
   <visible>1</visible>
   <action>
    <button>0</button>
@@ -693,17 +704,17 @@
 </animation> 
 <animation>
   <type>rotate</type>   
-  <object-name>nosmoking</object-name>         
+  <object-name>thumbler long.004</object-name>         
   <property>controls/switches/no-smoking-sign</property>
-  <factor>30</factor>
+  <factor>50</factor>
   <center>
-    <x-m>0.08697</x-m>
-    <y-m>-0.01575</y-m>
-    <z-m>0.09308</z-m>
+    <x-m>-0.010488</x-m>
+    <y-m>0.174673</y-m>
+    <z-m>0.440477</z-m>
   </center>
   <axis>
-    <x>0</x>
-    <y>1</y>
+    <x>1</x>
+    <y>0</y>
     <z>0</z>
   </axis>
 </animation>
@@ -712,7 +723,7 @@
 
 <animation>
   <type>pick</type>
-  <object-name>fastenseatbelts</object-name>            
+  <object-name>thumbler long.003</object-name>            
   <visible>1</visible>
   <action>
    <button>0</button>
@@ -725,17 +736,17 @@
 </animation> 
 <animation>
   <type>rotate</type>   
-  <object-name>fastenseatbelts</object-name>     
+  <object-name>thumbler long.003</object-name>     
   <property>controls/switches/seatbelt-sign</property>
-  <factor>30</factor>
+  <factor>50</factor>
   <center>
-    <x-m>0.08674</x-m>
-    <y-m>0.01662</y-m>
-    <z-m>0.09155</z-m>
+    <x-m>0.02003</x-m>
+    <y-m>0.174673</y-m>
+    <z-m>0.440477</z-m>
   </center>
   <axis>
-    <x>0</x>
-    <y>1</y>
+    <x>1</x>
+    <y>0</y>
     <z>0</z>
   </axis>
 </animation>
@@ -744,7 +755,7 @@
 
 <animation>
   <type>pick</type>
-  <object-name>FuelpumpL</object-name>         
+  <object-name>thumbler long.039</object-name>         
   <visible>1</visible>
   <action>
    <button>0</button>
@@ -761,24 +772,24 @@
 </animation> 
 <animation>
   <type>rotate</type>   
-  <object-name>FuelpumpL</object-name>  
+  <object-name>thumbler long.039</object-name>  
   <property>controls/fuel/tank[2]/pump-left</property>
-  <factor>30</factor>
+  <factor>50</factor>
   <center>
-    <x-m>0.19497</x-m>
-    <y-m>-0.27656</y-m>
-    <z-m>0.09130</z-m>
+    <x-m>-0.263055</x-m>
+    <y-m>0.141352</y-m>
+    <z-m>0.356865</z-m>
   </center>
   <axis>
-    <x>0</x>
-    <y>1</y>
+    <x>1</x>
+    <y>0</y>
     <z>0</z>
   </axis>
 </animation>
 
 <animation>
   <type>pick</type>
-  <object-name>FuelpumpR</object-name>         
+  <object-name>thumbler long.037</object-name>         
   <visible>1</visible>
   <action>
    <button>0</button>
@@ -795,17 +806,17 @@
 </animation> 
 <animation>
   <type>rotate</type>   
-  <object-name>FuelpumpR</object-name>  
+  <object-name>thumbler long.037</object-name>  
   <property>controls/fuel/tank[2]/pump-right</property>
-  <factor>30</factor>
+  <factor>50</factor>
   <center>
-    <x-m>0.19503</x-m>
-    <y-m>-0.24501</y-m>
-    <z-m>0.09194</z-m>
+    <x-m>-0.263055</x-m>
+    <y-m>0.141352</y-m>
+    <z-m>0.356865</z-m>
   </center>
   <axis>
-    <x>0</x>
-    <y>1</y>
+    <x>1</x>
+    <y>0</y>
     <z>0</z>
   </axis>
 </animation>
@@ -814,7 +825,7 @@
 
 <animation>
   <type>pick</type>
-  <object-name>FuelPumpAFTL</object-name>         
+  <object-name>thumbler long.041</object-name>         
   <visible>1</visible>
   <action>
     <button>0</button>
@@ -831,24 +842,24 @@
 </animation>
 <animation>
   <type>rotate</type>   
-  <object-name>FuelPumpAFTL</object-name>  
+  <object-name>thumbler long.041</object-name>  
   <property>controls/fuel/tank[0]/pump-aft</property>
-  <factor>30</factor>
+  <factor>50</factor>
   <center>
-    <x-m>0.24721</x-m>
-    <y-m>-0.31131</y-m>
-    <z-m>0.09193</z-m>
+    <x-m>-0.294529</x-m>
+    <y-m>0.120188</y-m>
+    <z-m>0.309331</z-m>
   </center>
   <axis>
-    <x>0</x>
-    <y>1</y>
+    <x>1</x>
+    <y>0</y>
     <z>0</z>
   </axis>
 </animation> 
 
 <animation>
   <type>pick</type>
-  <object-name>FuelPumpFWDL</object-name>         
+  <object-name>thumbler long.040</object-name>         
   <visible>1</visible>
   <action>
     <button>0</button>
@@ -865,24 +876,24 @@
 </animation>
 <animation>
   <type>rotate</type>   
-  <object-name>FuelPumpFWDL</object-name>  
+  <object-name>thumbler long.040</object-name>  
   <property>controls/fuel/tank[0]/pump-fwd</property>
-  <factor>30</factor>
+  <factor>50</factor>
   <center>
-    <x-m>0.24728</x-m>
-    <y-m>-0.27965</y-m>
-    <z-m>0.09233</z-m>
+    <x-m>-0.26905</x-m>
+    <y-m>0.120188</y-m>
+    <z-m>0.309331</z-m>
   </center>
   <axis>
-    <x>0</x>
-    <y>1</y>
+    <x>1</x>
+    <y>0</y>
     <z>0</z>
   </axis>
 </animation>
 
 <animation>
   <type>pick</type>
-  <object-name>FuelPumpFWDR</object-name>         
+  <object-name>thumbler long.042</object-name>         
   <visible>1</visible>
   <action>
     <button>0</button>
@@ -899,24 +910,24 @@
 </animation>
 <animation>
   <type>rotate</type>   
-  <object-name>FuelPumpFWDR</object-name>  
+  <object-name>thumbler long.042</object-name>  
   <property>controls/fuel/tank[1]/pump-fwd</property>
-  <factor>30</factor>
+  <factor>50</factor>
   <center>
-    <x-m>0.24713</x-m>
-    <y-m>-0.23768</y-m>
-    <z-m>0.09121</z-m>
+    <x-m>-0.205504</x-m>
+    <y-m>0.120188</y-m>
+    <z-m>0.309331</z-m>
   </center>
   <axis>
-    <x>0</x>
-    <y>1</y>
+    <x>1</x>
+    <y>0</y>
     <z>0</z>
   </axis>
 </animation>
 
 <animation>
   <type>pick</type>
-  <object-name>FuelPumpAFTR</object-name>         
+  <object-name>thumbler long.043</object-name>         
   <visible>1</visible>
   <action>
     <button>0</button>
@@ -933,17 +944,17 @@
 </animation>
 <animation>
   <type>rotate</type>   
-  <object-name>FuelPumpAFTR</object-name>  
+  <object-name>thumbler long.043</object-name>  
   <property>controls/fuel/tank[1]/pump-aft</property>
-  <factor>30</factor>
+  <factor>50</factor>
   <center>
-    <x-m>0.24698</x-m>
-    <y-m>-0.20608</y-m>
-    <z-m>0.09089</z-m>
+    <x-m>-0.230983</x-m>
+    <y-m>0.120188</y-m>
+    <z-m>0.309331</z-m>
   </center>
   <axis>
-    <x>0</x>
-    <y>1</y>
+    <x>1</x>
+    <y>0</y>
     <z>0</z>
   </axis>
 </animation>
