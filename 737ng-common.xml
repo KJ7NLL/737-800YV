@@ -3,7 +3,7 @@
 <PropertyList include="Aircraft/Generic/Human/Include/walker-include.xml">
 
 	<sim>
-		<author>Michael Soitanen, Gabriel Hernandez (YV3399), Josh Davidson (Octal450), legoboyvdlp, RenanMsV (BR-RVD), Xavier Del Campo Romero</author>
+		<author>Michael Soitanen, Gabriel Hernandez (YV3399), Josh Davidson (Octal450), legoboyvdlp, RenanMsV (BR-RVD), Xavier Del Campo Romero, Fil0s0v, Zeke (Clash/KJ7NLL)</author>
 		<status>Version 0.6</status>
 		<flight-model>jsb</flight-model>
 
