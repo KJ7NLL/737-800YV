@@ -2620,8 +2620,8 @@
   <factor>45</factor>
   <center>
     <x-m>-0.06818</x-m>
-    <y-m>0.107453</y-m>
-    <z-m>0.302957</z-m>
+    <y-m>0.107176</y-m>
+    <z-m>0.302334</z-m>
   </center>
   <axis>
 		<y>0.913545457642601</y>
@@ -2639,16 +2639,18 @@
 
 <animation>
   <type>knob</type>
-  <object-name>WiperRKnob</object-name>
+  <object-name>thumbler big.001</object-name>
+  <object-name>thumbler big.028</object-name>
   <property>/controls/electrical/WiperR</property>
-  <factor>25</factor>
+  <factor>45</factor>
   <center>
-    <x-m>0.23934</x-m>	
-    <y-m>0.00241</y-m>
-    <z-m>0.09376</z-m>
+    <x-m>0.003442</x-m>	
+    <y-m>0.106414</y-m>
+    <z-m>0.302494</z-m>
   </center>
   <axis>
-    <x>0</x><y>0</y><z>-1</z>
+		<y>0.913545457642601</y>
+		<z>-0.4067366430758</z>
   </axis>
   <action>
     <binding>
@@ -2662,21 +2664,25 @@
 
 <animation>
   <type>knob</type>
-  <object-name>TempLKnob</object-name>
+  <object-name>thumbler big.009</object-name>
+  <object-name>thumbler big.023</object-name>
   <property>/controls/airco/TempL</property>
+  <offset-deg>-107</offset-deg>
   <factor>3</factor>
   <center>
-    <x-m>-0.16329</x-m>	
-    <y-m>0.21995</y-m>
-    <z-m>0.0932</z-m>
+    <x-m>0.214362</x-m>	
+    <y-m>0.270912</y-m>
+    <z-m>0.67009</z-m>
   </center>
   <axis>
-    <x>0</x><y>0</y><z>-1</z>
+		<y>0.913545457642601</y>
+		<z>-0.4067366430758</z>
   </axis>
   <action>
     <binding>
       <command>property-adjust</command>
       <property>/controls/airco/TempL</property>
+    <factor>5</factor>
 	  <min>0</min>
 	  <max>100</max>
     </binding>
@@ -2685,21 +2691,25 @@
 
 <animation>
   <type>knob</type>
-  <object-name>TempCKnob</object-name>
+  <object-name>thumbler big.010</object-name>
+  <object-name>thumbler big.022</object-name>
   <property>/controls/airco/TempC</property>
+  <offset-deg>-107</offset-deg>
   <factor>3</factor>
   <center>
-    <x-m>-0.16193</x-m>	
-    <y-m>0.26083</y-m>
-    <z-m>0.0932</z-m>
+    <x-m>0.256197</x-m>	
+    <y-m>0.270912</y-m>
+    <z-m>0.67009</z-m>
   </center>
   <axis>
-    <x>0</x><y>0</y><z>-1</z>
+		<y>0.913545457642601</y>
+		<z>-0.4067366430758</z>
   </axis>
   <action>
     <binding>
       <command>property-adjust</command>
       <property>/controls/airco/TempC</property>
+    <factor>5</factor>
 	  <min>0</min>
 	  <max>100</max>
     </binding>
@@ -2708,21 +2718,25 @@
 
 <animation>
   <type>knob</type>
-  <object-name>TempRKnob</object-name>
+  <object-name>thumbler big.011</object-name>
+  <object-name>thumbler big.021</object-name>
   <property>/controls/airco/TempR</property>
+  <offset-deg>-107</offset-deg>
   <factor>3</factor>
   <center>
-    <x-m>-0.16193</x-m>	
-    <y-m>0.30287</y-m>
-    <z-m>0.0932	</z-m>
+    <x-m>0.298541</x-m>	
+    <y-m>0.270912</y-m>
+    <z-m>0.67009	</z-m>
   </center>
   <axis>
-    <x>0</x><y>0</y><z>-1</z>
+		<y>0.913545457642601</y>
+		<z>-0.4067366430758</z>
   </axis>
   <action>
     <binding>
       <command>property-adjust</command>
       <property>/controls/airco/TempR</property>
+    <factor>5</factor>
 	  <min>0</min>
 	  <max>100</max>
     </binding>
@@ -2731,16 +2745,19 @@
 
 <animation>
   <type>knob</type>
-  <object-name>TempSupplyDuctKnob</object-name>
+  <object-name>thumbler big.012</object-name>
+  <object-name>thumbler big.020</object-name>
   <property>/controls/airco/TempSupplyDuct</property>
+  <offset-deg>-135</offset-deg>
   <factor>45</factor>
   <center>
-    <x-m>-0.2388</x-m>	
-    <y-m>0.30086</y-m>
-    <z-m>0.09376</z-m>
+    <x-m>0.290498</x-m>	
+    <y-m>0.310154</y-m>
+    <z-m>0.758231</z-m>
   </center>
   <axis>
-    <x>0</x><y>0</y><z>-1</z>
+		<y>0.913545457642601</y>
+		<z>-0.4067366430758</z>
   </axis>
   <action>	
     <binding>
@@ -2754,16 +2771,18 @@
 
 <animation>
   <type>knob</type>
-  <object-name>PressureKnob</object-name>
+  <object-name>thumbler big.003</object-name>
+  <object-name>thumbler big.026</object-name>
   <property>/controls/airco/Pressure</property>
-  <factor>25</factor>
+  <factor>45</factor>
   <center>
-    <x-m>0.19952</x-m>	
-    <y-m>0.29655</y-m>
-    <z-m>0.09376</z-m>
+    <x-m>0.288392</x-m>	
+    <y-m>0.124939</y-m>
+    <z-m>0.342229</z-m>
   </center>
   <axis>
-    <x>0</x><y>0</y><z>-1</z>
+		<y>0.913545457642601</y>
+		<z>-0.4067366430758</z>
   </axis>
   <action>
     <binding>
@@ -2867,16 +2886,18 @@
 
 <animation>
   <type>knob</type>
-  <object-name>CrossfeedKnob</object-name>
+  <object-name>thumbler crossfeed.001</object-name>
+  <object-name>thumbler crossfeed.002</object-name>
   <property>/controls/fuel/Crossfeed</property>
   <factor>90</factor>
   <center>
-    <x-m>0.13917</x-m>
-    <y-m>-0.25965</y-m>
-    <z-m>0.08876</z-m>
+    <x-m>-0.250031</x-m>
+    <y-m>0.15344</y-m>
+    <z-m>0.408549</z-m>
   </center>
   <axis>
-    <x>0</x><y>0</y><z>-1</z>
+		<y>0.913545457642601</y>
+		<z>-0.4067366430758</z>
   </axis>
   <action>
     <binding>
@@ -2909,15 +2930,16 @@
 
 <animation>
   <type>knob</type>
-  <object-name>FltAltDial</object-name>
+  <object-name>ovrhd alt base.baked.001</object-name>
   <property>/controls/airco/FltAltDial</property>
   <center>
-    <x-m>0.12742</x-m>	
-    <y-m>0.22775</y-m>
-    <z-m>0.09576</z-m>
+    <x-m>0.229903</x-m>	
+    <y-m>0.148742</y-m>
+    <z-m>0.396458</z-m>
   </center>
   <axis>
-    <x>0</x><y>0</y><z>-1</z>
+		<y>0.913545457642601</y>
+		<z>-0.4067366430758</z>
   </axis>
   <action>
     <binding>
@@ -2932,15 +2954,16 @@
 
 <animation>
   <type>knob</type>
-  <object-name>LandAltDial</object-name>
+  <object-name>ovrhd alt base 2.baked.001</object-name>
   <property>/controls/airco/LandAltDial</property>
   <center>
-    <x-m>0.19839</x-m>	
-    <y-m>0.22881</y-m>
-    <z-m>0.09576</z-m>
+    <x-m>0.230193</x-m>	
+    <y-m>0.125586</y-m>
+    <z-m>0.344449</z-m>
   </center>
   <axis>
-    <x>0</x><y>0</y><z>-1</z>
+		<y>0.913545457642601</y>
+		<z>-0.4067366430758</z>
   </axis>
   <action>
     <binding>
