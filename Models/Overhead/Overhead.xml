@@ -50,6 +50,89 @@
 			</equals>
 		</condition>
 	</animation>
+
+  <!-- LAMP LIGHTING -->
+  <animation>
+    <name>lamp emissive</name>
+		<type>material</type>
+		<object-name>overheatHYDL.on</object-name>
+		<object-name>overheatHYDR.on</object-name>
+		<object-name>LAVSMOKE.on</object-name>
+		<object-name>EQIPCOOLL.on</object-name>
+		<object-name>EQIPCOOLR.on</object-name>
+		<object-name>NOTARMED.on</object-name>
+		<object-name>MAINT.on</object-name>
+		<object-name>STBYpwr.on</object-name>
+		<object-name>DRIVEL.on</object-name>
+		<object-name>DRIVER.on</object-name>
+		<object-name>TRANSL.on</object-name>
+		<object-name>TRANSR.on</object-name>
+		<object-name>SOURCEL.on</object-name>
+		<object-name>SOURCER.on</object-name>
+		<object-name>ELEC.on</object-name>
+		<object-name>TR.on</object-name>
+		<object-name>BATDISCHARGE.on</object-name>
+		<object-name>WINOVHTLS.on</object-name>
+		<object-name>WINOVHTLF.on</object-name>
+		<object-name>WINOVHTRF.on</object-name>
+		<object-name>WINOVHTRS.on</object-name>
+		<object-name>COWLICEL.on</object-name>
+		<object-name>COWLICER.on</object-name>
+		<object-name>YAWDAMP.on</object-name>
+		<object-name>STBYHYDQTY.on</object-name>
+		<object-name>STBYHYDPRESS.on</object-name>
+		<object-name>DIFFPRESS.on</object-name>
+		<object-name>AUTOSLATFAIL.on</object-name>
+		<object-name>SPDTRIM.on</object-name>
+		<object-name>MACHTRIM.on</object-name>
+		<object-name>filterbypassL.on</object-name>
+		<object-name>filterbypassR.on</object-name>
+   	<object-name>LOPRESSC1.on</object-name>
+  	<object-name>LOPRESSC2.on</object-name>
+  	<object-name>LOPRESSL1.on</object-name>
+	  <object-name>LOPRESSL2.on</object-name>
+  	<object-name>LOPRESSR1.on</object-name>
+	  <object-name>LOPRESSR2.on</object-name>
+		<object-name>APUbus.on</object-name>
+		<object-name>GENOFFL.on</object-name>
+		<object-name>GENOFFR.on</object-name>
+		<object-name>WINGLvalve.on</object-name>
+		<object-name>WINGRvalve.on</object-name>
+		<object-name>ENGLcowl.on</object-name>
+		<object-name>ENGRcowl.on</object-name>
+		<object-name>WINHEATLF.on</object-name>
+		<object-name>WINHEATRF.on</object-name>
+		<object-name>WINHEATLS.on</object-name>
+		<object-name>WINHEATRS.on</object-name>
+		<object-name>STBYRUDL.on</object-name>
+		<object-name>STBYRUDR.on</object-name>
+		<object-name>STBYRUDON.on</object-name>
+		<object-name>HYDAelec2lopress.on</object-name>
+		<object-name>HYDBelec1lopress.on</object-name>
+		<object-name>HYDAeng1lopress.on</object-name>
+		<object-name>HYDBeng2lopress.on</object-name>
+	  <object-name>engL.on</object-name>
+  	<object-name>engR.on</object-name>
+	  <object-name>sparL.on</object-name>
+	  <object-name>sparR.on</object-name>
+	  <object-name>valveopen.on</object-name>
+    <emission>
+      <red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+      <factor>
+        <expression>
+          <sum>
+            <product>
+              <property>/controls/electrical/PanelLight</property>
+              <value>0.50</value>
+            </product>
+            <value>0.50</value>
+          </sum>
+        </expression>
+      </factor>
+    </emission>
+	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>overheatHYDL.off</object-name>
@@ -123,8 +206,8 @@
 		<factor>-60</factor>
 		<center>
 			<x-m>-0.111504</x-m>
-			<y-m>0.233139</y-m>
-			<z-m>0.564292</z-m>
+			<y-m>0.228412</y-m>
+			<z-m>0.553675</z-m>
 		</center>
 		<axis>
 			<y>0.4067366430758</y>
@@ -167,8 +250,8 @@
 		</interpolation>
 		<center>
 			<x-m>-0.103507</x-m>
-			<y-m>0.230184</y-m>
-			<z-m>0.565158</z-m>
+			<y-m>0.225457</y-m>
+			<z-m>0.554541</z-m>
 		</center>
 		<axis>
 			<y>0.4067366430758</y>
@@ -179,7 +262,7 @@
 	<!-- External Power -->
 	<animation>
 		<type>select</type>
-		<object-name>thumbler long.045</object-name>
+		<object-name>GRDpw.on</object-name>
 		<condition>
 			<equals>
 				<property>services/ext-pwr/enable</property>
@@ -190,7 +273,7 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>thumbler long.045</object-name>
+		<object-name>GRDpw.off</object-name>
 		<condition>
 			<equals>
 				<property>services/ext-pwr/enable</property>
@@ -221,12 +304,12 @@
 			<entry><ind>1</ind><dep> 30</dep></entry>
 		</interpolation>
 		<center>
-			<x-m>0</x-m>
-			<y-m>0</y-m>
-			<z-m>0</z-m>
+			<x-m>-0.102768</x-m>
+			<y-m>0.180201</y-m>
+			<z-m>0.444123</z-m>
 		</center>
 		<axis>
-			<y>1</y>
+			<x>1</x>
 		</axis>
 	</animation>
 	
@@ -900,7 +983,7 @@
     <repeatable type="bool">false</repeatable>      
     <binding>
       <command>property-toggle</command>
-      <property>controls/fuel/tank[1]/pump-fwd</property>
+      <property>controls/fuel/tank[1]/pump-aft</property>
     </binding>
     <binding>
       <command>nasal</command>
@@ -911,7 +994,7 @@
 <animation>
   <type>rotate</type>   
   <object-name>thumbler long.042</object-name>  
-  <property>controls/fuel/tank[1]/pump-fwd</property>
+  <property>controls/fuel/tank[1]/pump-aft</property>
   <factor>50</factor>
   <center>
     <x-m>-0.205504</x-m>
@@ -934,7 +1017,7 @@
     <repeatable type="bool">false</repeatable>     
     <binding>
       <command>property-toggle</command>
-      <property>controls/fuel/tank[1]/pump-aft</property>
+      <property>controls/fuel/tank[1]/pump-fwd</property>
     </binding>
     <binding>
       <command>nasal</command>
@@ -945,7 +1028,7 @@
 <animation>
   <type>rotate</type>   
   <object-name>thumbler long.043</object-name>  
-  <property>controls/fuel/tank[1]/pump-aft</property>
+  <property>controls/fuel/tank[1]/pump-fwd</property>
   <factor>50</factor>
   <center>
     <x-m>-0.230983</x-m>
@@ -1016,7 +1099,7 @@
 	<condition>
 		<and>
 			<equals>
-				<property>controls/fuel/tank[2]/pump-left</property>
+				<property>controls/fuel/tank[2]/pump-right</property>
 				<value>1</value>
 			</equals>
 			<greater-than> 
@@ -1167,7 +1250,7 @@
 
  <animation>
       <type>pick</type>
-      <object-name>EngGen1</object-name>         
+      <object-name>thumbler long.046</object-name>         
       <visible>1</visible>
       <action>
         <button>0</button>
@@ -1184,24 +1267,24 @@
     </animation>
     <animation>
       <type>rotate</type>   
-      <object-name>EngGen1</object-name>  
+      <object-name>thumbler long.046</object-name>  
       <property>controls/electrical/eng/Lsw</property>
-      <factor>30</factor>
+      <factor>50</factor>
       <center>
-        <x-m>0.16636</x-m>
-        <y-m>0.15703</y-m>
-        <z-m>0.09351</z-m>
+        <x-m>-0.150803</x-m>
+        <y-m>0.144866</y-m>
+        <z-m>0.364759</z-m>
       </center>
       <axis>
-        <x>0</x>
-        <y>1</y>
+        <x>1</x>
+        <y>0</y>
         <z>0</z>
       </axis>
     </animation>
     
    <animation>
       <type>pick</type>
-      <object-name>EngGen2</object-name>         
+      <object-name>thumbler long.049</object-name>         
       <visible>1</visible>
       <action>
         <button>0</button>
@@ -1218,17 +1301,17 @@
     </animation>
     <animation>
       <type>rotate</type>   
-      <object-name>EngGen2</object-name>  
+      <object-name>thumbler long.049</object-name>  
       <property>controls/electrical/eng/Rsw</property>
-      <factor>30</factor>
+      <factor>50</factor>
       <center>
-        <x-m>0.16635</x-m>
-        <y-m>-0.05795</y-m>
-        <z-m>0.09409</z-m>
+        <x-m>-0.055814</x-m>
+        <y-m>0.144866</y-m>
+        <z-m>0.364759</z-m>
       </center>
       <axis>
-        <x>0</x>
-        <y>1</y>
+        <x>1</x>
+        <y>0</y>
         <z>0</z>
       </axis>
     </animation>
@@ -1237,7 +1320,7 @@
 
  <animation>
       <type>pick</type>
-      <object-name>ApuGenL</object-name>         
+      <object-name>thumbler long.047</object-name>         
       <visible>1</visible>
       <action>
         <button>0</button>
@@ -1254,24 +1337,24 @@
     </animation>
 <animation>
       <type>rotate</type>   
-      <object-name>ApuGenL</object-name>  
+      <object-name>thumbler long.047</object-name>  
       <property>controls/electrical/apu/Lsw</property>
-      <factor>30</factor>
+      <factor>50</factor>
       <center>
-        <x-m>0.16655</x-m>
-        <y-m>0.12901</y-m>
-        <z-m>0.09512</z-m>
+        <x-m>-0.124649</x-m>
+        <y-m>0.144866</y-m>
+        <z-m>0.364759</z-m>
       </center>
       <axis>
-        <x>0</x>
-        <y>1</y>
+        <x>1</x>
+        <y>0</y>
         <z>0</z>
       </axis>
     </animation>
   
  <animation>
       <type>pick</type>
-      <object-name>ApuGenR</object-name>         
+      <object-name>thumbler long.048</object-name>         
       <visible>1</visible>
       <action>
         <button>0</button>
@@ -1288,17 +1371,17 @@
     </animation>
     <animation>
       <type>rotate</type>   
-      <object-name>ApuGenR</object-name>  
+      <object-name>thumbler long.048</object-name>  
       <property>controls/electrical/apu/Rsw</property>
-      <factor>30</factor>
+      <factor>50</factor>
       <center>
-        <x-m>0.16644</x-m>
-        <y-m>0.08698</y-m>
-        <z-m>0.09425</z-m>
+        <x-m>-0.081968</x-m>
+        <y-m>0.144866</y-m>
+        <z-m>0.364759</z-m>
       </center>
       <axis>
-        <x>0</x>
-        <y>1</y>
+        <x>1</x>
+        <y>0</y>
         <z>0</z>
       </axis>
     </animation>
@@ -1505,7 +1588,7 @@
 	
 <animation>
       <type>pick</type>
-      <object-name>wingantiice</object-name>         
+      <object-name>thumbler long.008</object-name>         
       <visible>1</visible>
       <action>
         <button>0</button>
@@ -1522,23 +1605,23 @@
     </animation>
     <animation>
       <type>rotate</type>   
-      <object-name>wingantiice</object-name>  
+      <object-name>thumbler long.008</object-name>  
       <property>/controls/deice/wing-heat</property>
-      <factor>30</factor>
+      <factor>50</factor>
       <center>
-        <x-m>-0.10681</x-m>
-        <y-m>0.07800</y-m>
-        <z-m>0.09137</z-m>
+        <x-m>0.081168</x-m>
+        <y-m>0.256568</y-m>
+        <z-m>0.624417</z-m>
       </center>
       <axis>
-        <x>0</x>
-        <y>1</y>
+        <x>1</x>
+        <y>0</y>
         <z>0</z>
       </axis>
     </animation>
     <animation>
       <type>pick</type>
-      <object-name>enganti1</object-name>         
+      <object-name>thumbler long.009</object-name>         
       <visible>1</visible>
       <action>
         <button>0</button>
@@ -1555,23 +1638,23 @@
     </animation>
     <animation>
       <type>rotate</type>   
-      <object-name>enganti1</object-name>  
+      <object-name>thumbler long.009</object-name>  
       <property>/controls/deice/lengine</property>
-      <factor>30</factor>
+      <factor>50</factor>
       <center>
-        <x-m>-0.10643</x-m>
-        <y-m>0.12794</y-m>
-        <z-m>0.09386</z-m>
+        <x-m>0.127639</x-m>
+        <y-m>0.253327</y-m>
+        <z-m>0.617137</z-m>
       </center>
       <axis>
-        <x>0</x>
-        <y>1</y>
+        <x>1</x>
+        <y>0</y>
         <z>0</z>
       </axis>
     </animation> 
     <animation>
       <type>pick</type>
-      <object-name>enganti2</object-name>         
+      <object-name>thumbler long.010</object-name>         
       <visible>1</visible>
       <action>
         <button>0</button>
@@ -1588,51 +1671,25 @@
     </animation>
     <animation>
       <type>rotate</type>   
-      <object-name>enganti2</object-name>  
+      <object-name>thumbler long.010</object-name>  
       <property>/controls/deice/rengine</property>
-      <factor>30</factor>
+      <factor>50</factor>
       <center>
-        <x-m>-0.10643</x-m>
-        <y-m>0.15569</y-m>
-        <z-m>0.09386</z-m>
+        <x-m>0.153225</x-m>
+        <y-m>0.253327</y-m>
+        <z-m>0.617137</z-m>
       </center>
       <axis>
-        <x>0</x>
-        <y>1</y>
+        <x>1</x>
+        <y>0</y>
         <z>0</z>
       </axis>
     </animation>
 
   <!--Window Heat-->
-	<animation>
-		<type>select</type>
-		<object-name>WINHEATLF.on</object-name>
-		<object-name>WINHEATRF.on</object-name>
-		<object-name>WINHEATLS.on</object-name>
-		<object-name>WINHEATRS.on</object-name>
-		<condition>
-			<equals>
-				<property>controls/deice/windowprobeheat</property>
-				<value>1</value>
-			</equals>
-		</condition>
-	</animation>
-	<animation>
-		<type>select</type>
-		<object-name>WINHEATLF.off</object-name>
-		<object-name>WINHEATRF.off</object-name>
-		<object-name>WINHEATLS.off</object-name>
-		<object-name>WINHEATRS.off</object-name>
-		<condition>
-			<equals>
-				<property>controls/deice/windowprobeheat</property>
-				<value>0</value>
-			</equals>
-		</condition>
-	</animation>
     <animation>
       <type>pick</type>
-      <object-name>windowlf</object-name>         
+      <object-name>thumbler long.014</object-name>         
       <visible>1</visible>
       <action>
         <button>0</button>
@@ -1649,23 +1706,23 @@
     </animation>
     <animation>
       <type>rotate</type>   
-      <object-name>windowlf</object-name>  
+      <object-name>thumbler long.014</object-name>  
       <property>/controls/deice/windowprobeheat</property>
-      <factor>30</factor>
+      <factor>50</factor>
       <center>
-        <x-m>-0.24707</x-m>
-        <y-m>0.06009</y-m>
-        <z-m>0.09258</z-m>
+        <x-m>0.056041</x-m>
+        <y-m>0.320178</y-m>
+        <z-m>0.767287</z-m>
       </center>
       <axis>
-        <x>0</x>
-        <y>1</y>
+        <x>1</x>
+        <y>0</y>
         <z>0</z>
       </axis>
     </animation>
     <animation>
       <type>pick</type>
-      <object-name>windowlf1</object-name>         
+      <object-name>thumbler long.013</object-name>         
       <visible>1</visible>
       <action>
         <button>0</button>
@@ -1682,23 +1739,56 @@
     </animation>
     <animation>
       <type>rotate</type>   
-      <object-name>windowlf1</object-name>  
+      <object-name>thumbler long.013</object-name>  
       <property>/controls/deice/windowprobeheat</property>
-      <factor>30</factor>
+      <factor>50</factor>
       <center>
-        <x-m>-0.24690</x-m>
-        <y-m>0.08433</y-m>
-        <z-m>0.09341</z-m>
+        <x-m>0.08176</x-m>
+        <y-m>0.320178</y-m>
+        <z-m>0.767287</z-m>
       </center>
       <axis>
-        <x>0</x>
-        <y>1</y>
+        <x>1</x>
+        <y>0</y>
         <z>0</z>
       </axis>
     </animation> 
     <animation>
       <type>pick</type>
-      <object-name>windowctr</object-name>         
+      <object-name>thumbler long.001</object-name>         
+      <visible>1</visible>
+      <action>
+        <button>0</button>
+        <repeatable type="bool">false</repeatable>  
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/deice/windowprobeheatctr</property>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>props.globals.getNode("controls/switches/switch").setBoolValue(1);</script>
+        </binding>
+      </action> 
+    </animation>
+    <animation>
+      <type>rotate</type>   
+      <object-name>thumbler long.001</object-name>  
+      <property>/controls/deice/windowprobeheatctr</property>
+      <factor>-25</factor>
+      <center>
+        <x-m>0.110076</x-m>
+        <y-m>0.324829</y-m>
+        <z-m>0.767287</z-m>
+      </center>
+      <axis>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+      </axis>
+    </animation> 
+    <animation>
+      <type>pick</type>
+      <object-name>thumbler long.015</object-name>         
       <visible>1</visible>
       <action>
         <button>0</button>
@@ -1715,56 +1805,23 @@
     </animation>
     <animation>
       <type>rotate</type>   
-      <object-name>windowctr</object-name>  
+      <object-name>thumbler long.015</object-name>  
       <property>/controls/deice/windowprobeheat</property>
-      <factor>30</factor>
+      <factor>50</factor>
       <center>
-        <x-m>-0.24691</x-m>
-        <y-m>0.11191</y-m>
-        <z-m>0.09326</z-m>
+        <x-m>0.137521</x-m>
+        <y-m>0.320178</y-m>
+        <z-m>0.767287</z-m>
       </center>
       <axis>
-        <x>0</x>
-        <y>1</y>
+        <x>1</x>
+        <y>0</y>
         <z>0</z>
       </axis>
     </animation> 
     <animation>
       <type>pick</type>
-      <object-name>windowrt1</object-name>         
-      <visible>1</visible>
-      <action>
-        <button>0</button>
-        <repeatable type="bool">false</repeatable>  
-        <binding>
-          <command>property-toggle</command>
-          <property>/controls/deice/windowprobeheat</property>
-        </binding>
-        <binding>
-          <command>nasal</command>
-          <script>props.globals.getNode("controls/switches/switch").setBoolValue(1);</script>
-        </binding>
-      </action> 
-    </animation>
-    <animation>
-      <type>rotate</type>   
-      <object-name>windowrt1</object-name>  
-      <property>/controls/deice/windowprobeheat</property>
-      <factor>30</factor>
-      <center>
-        <x-m>-0.24696</x-m>
-        <y-m>0.13806</y-m>
-        <z-m>0.09286</z-m>
-      </center>
-      <axis>
-        <x>0</x>
-        <y>1</y>
-        <z>0</z>
-      </axis>
-    </animation> 
-    <animation>
-      <type>pick</type>
-      <object-name>windowrt</object-name>         
+      <object-name>thumbler long.016</object-name>         
       <visible>1</visible>
       <action>
         <button>0</button>
@@ -1781,20 +1838,59 @@
     </animation>
     <animation>
       <type>rotate</type>   
-      <object-name>windowrt</object-name>  
+      <object-name>thumbler long.016</object-name>  
       <property>/controls/deice/windowprobeheat</property>
-      <factor>30</factor>
+      <factor>50</factor>
       <center>
-        <x-m>-0.24695</x-m>
-        <y-m>0.16354</y-m>
-        <z-m>0.09373</z-m>
+        <x-m>0.162964</x-m>
+        <y-m>0.320178</y-m>
+        <z-m>0.767287</z-m>
       </center>
       <axis>
-        <x>0</x>
-        <y>1</y>
+        <x>1</x>
+        <y>0</y>
         <z>0</z>
       </axis>
     </animation> 
+
+	<animation>
+		<type>select</type>
+		<object-name>WINHEATLF.on</object-name>
+		<object-name>WINHEATRF.on</object-name>
+		<object-name>WINHEATLS.on</object-name>
+		<object-name>WINHEATRS.on</object-name>
+		<condition>
+      <and>
+        <equals>
+            <property>controls/deice/windowprobeheat</property>
+            <value>1</value>
+        </equals>
+        <not-equals>
+          <property>controls/deice/windowprobeheatctr</property>
+          <value>1</value>
+        </not-equals>
+      </and>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>WINHEATLF.off</object-name>
+		<object-name>WINHEATRF.off</object-name>
+		<object-name>WINHEATLS.off</object-name>
+		<object-name>WINHEATRS.off</object-name>
+		<condition>
+			<or>
+        <not-equals>
+            <property>controls/deice/windowprobeheat</property>
+            <value>1</value>
+        </not-equals>
+        <equals>
+          <property>controls/deice/windowprobeheatctr</property>
+          <value>1</value>
+        </equals>
+      </or>
+		</condition>
+	</animation>
 
 	<!-- hyd lights -->
 	
@@ -2042,7 +2138,7 @@
 
     <animation>
       <type>pick</type>
-      <object-name>hydeng1</object-name>         
+      <object-name>thumbler long.030</object-name>         
       <visible>1</visible>
       <action>
         <button>0</button>
@@ -2059,24 +2155,24 @@
     </animation>
     <animation>
       <type>rotate</type>   
-      <object-name>hydeng1</object-name>  
+      <object-name>thumbler long.030</object-name>  
       <property>controls/hydraulic/a-eng1-pump</property>
-      <factor>30</factor>
+      <factor>50</factor>
       <center>
-        <x-m>-0.03142</x-m>
-        <y-m>0.06466</y-m>
-        <z-m>0.09329</z-m>
+        <x-m>0.063847</x-m>
+        <y-m>0.222407</y-m>
+        <z-m>0.538918</z-m>
       </center>
       <axis>
-        <x>0</x>
-        <y>1</y>
+        <x>1</x>
+        <y>0</y>
         <z>0</z>
       </axis>
     </animation> 
 
     <animation>
       <type>pick</type>
-	  <object-name>hydeng2</object-name>         
+	  <object-name>thumbler long.033</object-name>         
       <visible>1</visible>
       <action>
         <button>0</button>
@@ -2093,24 +2189,24 @@
     </animation>
     <animation>
       <type>rotate</type>   
-       <object-name>hydeng2</object-name>        
+       <object-name>thumbler long.033</object-name>        
       <property>controls/hydraulic/b-eng2-pump</property>
-      <factor>30</factor>
+      <factor>50</factor>
       <center>
-        <x-m>-0.03150</x-m>
-        <y-m>0.12788</y-m>
-        <z-m>0.09266</z-m>
+        <x-m>0.158085</x-m>
+        <y-m>0.222407</y-m>
+        <z-m>0.538918</z-m>
       </center>
       <axis>
-        <x>0</x>
-        <y>1</y>
+        <x>1</x>
+        <y>0</y>
         <z>0</z>
       </axis>
     </animation> 
 
     <animation>
       <type>pick</type>
-	 <object-name>hydelectr2</object-name>         
+	 <object-name>thumbler long.031</object-name>         
       <visible>1</visible>
       <action>
         <button>0</button>
@@ -2127,24 +2223,24 @@
     </animation>
     <animation>
       <type>rotate</type>   
-	 <object-name>hydelectr2</object-name>  
+	 <object-name>thumbler long.031</object-name>  
       <property>controls/hydraulic/a-elec2-pump</property>
-      <factor>30</factor>
+      <factor>50</factor>
       <center>
-        <x-m>-0.03147</x-m>
-        <y-m>0.09233</y-m>
-        <z-m>0.09192</z-m>
+        <x-m>0.092071</x-m>
+        <y-m>0.222407</y-m>
+        <z-m>0.538918</z-m>
       </center>
       <axis>
-        <x>0</x>
-        <y>1</y>
+        <x>1</x>
+        <y>0</y>
         <z>0</z>
       </axis>
     </animation> 
 
     <animation>
       <type>pick</type>
-	 <object-name>hydelectr1</object-name>         
+	 <object-name>thumbler long.032</object-name>         
       <visible>1</visible>
       <action>
         <button>0</button>
@@ -2161,23 +2257,24 @@
     </animation>
     <animation>
       <type>rotate</type>   
-	  <object-name>hydelectr1</object-name>  
+	  <object-name>thumbler long.032</object-name>  
       <property>controls/hydraulic/b-elec1-pump</property>
-      <factor>30</factor>
+      <factor>50</factor>
       <center>
-        <x-m>-0.03146</x-m>
-        <y-m>0.15637</y-m>
-        <z-m>0.09264</z-m>
+        <x-m>0.129662</x-m>
+        <y-m>0.222407</y-m>
+        <z-m>0.538918</z-m>
       </center>
       <axis>
-        <x>0</x>
-        <y>1</y>
+        <x>1</x>
+        <y>0</y>
         <z>0</z>
       </axis>
     </animation> 
 
  <!-- Light panel -->
 
+<!-- I"M GUESSING THIS IS OLD CODE THAT IS UNUSED BECAUSE THIS OBJECT DOSEN'T EXIST
 <animation>
   <type>knob</type>
   <object-name>light-panel</object-name>
@@ -2189,7 +2286,9 @@
     <z-m>0.09376</z-m>
   </center>
   <axis>
-    <x>-0.45</x><y></y><z>-1</z>
+    <x>-0.45</x>
+    <y></y>
+    <z>-1</z>
   </axis>
 
   <action>
@@ -2217,20 +2316,21 @@
   <decrease>
   </decrease>
 </animation>
+-->
 
 <!-- Engine Starter -->
 
 <animation>
 	<type>pick</type>
-	<object-name>EngStartLKnob</object-name>       
+	<object-name>thumbler big.014</object-name>      
 </animation>
 <animation>
 	<type>pick</type>
-	<object-name>EngStartRKnob</object-name>       
+	<object-name>thumbler big.013</object-name>
 </animation>
 <animation>
 	<type>pick</type>
-	<object-name>Mesh282</object-name>       
+	<object-name>thumbler long.069</object-name>       
 	<action>
 		<button>0</button>
 		<binding>
@@ -2256,16 +2356,18 @@
 <!-- OLD ENG START BELOW KEPT UNTIL FINCTIONALITY AVAIL. REPLACE with COMMENTED OUT NEW ENG START BLOCK BELOW THESE WHEN READY -->
 <animation>
   <type>knob</type>
-  <object-name>EngStartLKnob</object-name>
+	<object-name>thumbler big.014</object-name>
+  <object-name>thumbler big.024</object-name>   
   <property>/controls/engines/engine[0]/starter</property>
-  <factor>17</factor>
+  <factor>-40</factor>
   <center>
-    <x-m>0.29909</x-m>
-    <y-m>-0.01652</y-m>
-    <z-m>0.08176</z-m>
+    <x-m>-0.018394</x-m>
+    <y-m>0.084387</y-m>
+    <z-m>0.252093</z-m>
   </center>
   <axis>
-    <x>0</x><y>0</y><z>-1</z>
+		<y>0.913545457642601</y>
+		<z>-0.4067366430758</z>
   </axis>
   <action>
     <binding>
@@ -2277,16 +2379,18 @@
 
 <animation>
   <type>knob</type>
-  <object-name>EngStartRKnob</object-name>
+	<object-name>thumbler big.013</object-name>       
+  <object-name>thumbler big.025</object-name>  
   <property>/controls/engines/engine[1]/starter</property>
-  <factor>17</factor>
+  <factor>-45</factor>
   <center>
-    <x-m>0.29851</x-m>
-    <y-m>0.08864</y-m>
-    <z-m>0.08176</z-m>
+    <x-m>0.086849</x-m>
+    <y-m>0.084387</y-m>
+    <z-m>0.252093</z-m>
   </center>
   <axis>
-    <x>0</x><y>0</y><z>-1</z>
+		<y>0.913545457642601</y>
+		<z>-0.4067366430758</z>
   </axis>
   <action>
     <binding>
@@ -2347,16 +2451,19 @@
  
 <animation>
   <type>knob</type>
-  <object-name>NavSourceKnob</object-name>
+  <object-name>thumbler big.004</object-name>
+  <object-name>thumbler big.029</object-name>
   <property>/controls/navigation/NavSource</property>
-  <factor>25</factor>
+  <factor>48</factor>
   <center>
-    <x-m>0.01195</x-m>
-    <y-m>-0.29865</y-m>
-    <z-m>0.09376</z-m>
+    <x-m>-0.28505</x-m>
+    <y-m>0.20007</y-m>
+    <z-m>0.510978</z-m>
   </center>
   <axis>
-    <x>0</x><y>0</y><z>-1</z>
+    <x>0</x>
+		<y>0.913545457642601</y>
+		<z>-0.4067366430758</z>
   </axis>
   <action>
     <binding>
@@ -2370,81 +2477,130 @@
 
 <animation>
   <type>knob</type>
-  <object-name>CircitBreakerLightKnob</object-name>
+  <object-name>thumbler big.007</object-name>
+  <object-name>thumbler big.019</object-name>
   <property>/controls/electrical/CircuitBreakerLight</property>
   <factor>280</factor>
   <center>
-    <x-m>-0.19264</x-m>
-    <y-m>0.0013</y-m>
-    <z-m>0.09376</z-m>
+    <x-m>0.00514</x-m>
+    <y-m>0.288373</y-m>
+    <z-m>0.709308</z-m>
   </center>
   <axis>
-    <x>0</x><y>0</y><z>-1</z>
+    <x>0</x>
+		<y>0.913545457642601</y>
+		<z>-0.4067366430758</z>
   </axis>
   <action>
     <binding>
-      <command>property-toggle</command>
+      <command>property-adjust</command>
       <property>/controls/electrical/CircuitBreakerLight</property>
+      <factor>0.05</factor>
+      <min>0</min>
+      <max>1</max>
+      <wrap>false</wrap>
     </binding>
   </action>
 </animation>
 
 <animation>
   <type>knob</type>
-  <object-name>PanelLightKnob</object-name>
+  <object-name>thumbler big.008</object-name>
+  <object-name>thumbler big.018</object-name>
   <property>/controls/electrical/PanelLight</property>
   <factor>280</factor>
   <center>
-    <x-m>-0.14155</x-m>
-    <y-m>0.00130</y-m>
-    <z-m>0.09376</z-m>
+    <x-m>0.00514</x-m>
+    <y-m>0.265486</y-m>
+    <z-m>0.657905</z-m>
   </center>
   <axis>
-    <x>0</x><y>0</y><z>-1</z>
+    <x>0</x>
+		<y>0.913545457642601</y>
+		<z>-0.4067366430758</z>
   </axis>
   <action>
     <binding>
-      <command>property-toggle</command>
+      <command>property-adjust</command>
       <property>/controls/electrical/PanelLight</property>
+      <factor>0.05</factor>
+      <min>0</min>
+      <max>1</max>
+      <wrap>false</wrap>
     </binding>
   </action>
 </animation>
 
+<!-- Panel lighting -->
+<animation>
+  <type>material</type>
+  <object-name>overhead panel-paintwhite</object-name>
+  <object-name>overhead panel text</object-name>
+  <object-name>thumbler big.016</object-name>
+  <object-name>thumbler big.017</object-name>
+  <object-name>thumbler big.018</object-name>
+  <object-name>thumbler big.019</object-name>
+  <object-name>thumbler big.020</object-name>
+  <object-name>thumbler big.021</object-name>
+  <object-name>thumbler big.022</object-name>
+  <object-name>thumbler big.023</object-name>
+  <object-name>thumbler big.024</object-name>
+  <object-name>thumbler big.025</object-name>
+  <object-name>thumbler big.026</object-name>
+  <object-name>thumbler big.027</object-name>
+  <object-name>thumbler big.028</object-name>
+  <object-name>thumbler big.029</object-name>
+  <object-name>thumbler crossfeed.002</object-name>
+  <emission>
+    <red>1</red>
+    <green>0.525</green>
+    <blue>0.159</blue>
+    <factor-prop>controls/electrical/PanelLight</factor-prop>
+  </emission>
+</animation>
+
+<!-- Voltage -->
 <animation>
   <type>knob</type>
-  <object-name>ACVoltometerKnob</object-name>
+  <object-name>thumbler big.005</object-name>
+  <object-name>thumbler big.017</object-name>
   <property>/controls/electrical/AC</property>
-  <factor>32</factor>
+  <offset-deg>-90</offset-deg>
+  <factor>45</factor>
   <center>
-    <x-m>-0.13729</x-m>
-    <y-m>-0.07099</y-m>
-    <z-m>0.09376</z-m>
+    <x-m>-0.061847</x-m>
+    <y-m>0.264213</y-m>
+    <z-m>0.655045</z-m>
   </center>
   <axis>
-    <x>0</x><y>0</y><z>-1</z>
+		<y>0.913545457642601</y>
+		<z>-0.4067366430758</z>
   </axis>
   <action>
     <binding>
       <command>property-adjust</command>
       <property>/controls/electrical/AC</property>
 	  <min>0</min>
-	  <max>7</max>
+	  <max>6</max>
     </binding>
   </action>
 </animation>
 
 <animation>
   <type>knob</type>
-  <object-name>DCVoltometerKnob</object-name>
+  <object-name>thumbler big.006</object-name>
+  <object-name>thumbler big.016</object-name>
   <property>/controls/electrical/DC</property>
-  <factor>32</factor>
+  <offset-deg>-135</offset-deg>
+  <factor>45</factor>
   <center>
-    <x-m>-0.13656</x-m>
-    <y-m>-0.15028</y-m>
-    <z-m>0.09376</z-m>
+    <x-m>-0.140852</x-m>
+    <y-m>0.264213</y-m>
+    <z-m>0.655045</z-m>
   </center>
   <axis>
-    <x>0</x><y>0</y><z>-1</z>
+		<y>0.913545457642601</y>
+		<z>-0.4067366430758</z>
   </axis>
   <action>
     <binding>
@@ -2458,16 +2614,18 @@
 
 <animation>
   <type>knob</type>
-  <object-name>WiperLKnob</object-name>
+  <object-name>thumbler big.002</object-name>
+  <object-name>thumbler big.027</object-name>
   <property>/controls/electrical/WiperL</property>
-  <factor>25</factor>
+  <factor>45</factor>
   <center>
-    <x-m>0.24019</x-m>
-    <y-m>-0.07332</y-m>
-    <z-m>0.09376</z-m>
+    <x-m>-0.06818</x-m>
+    <y-m>0.107453</y-m>
+    <z-m>0.302957</z-m>
   </center>
   <axis>
-    <x>0</x><y>0</y><z>-1</z>
+		<y>0.913545457642601</y>
+		<z>-0.4067366430758</z>
   </axis>
   <action>
     <binding>
@@ -2796,18 +2954,18 @@
 </animation>
 
 <animation>
-	<type>rotate</type>   
-	<object-name>Mesh282</object-name>
-	<object-name>Mesh282</object-name> 
+	<type>rotate</type>
+	<object-name>thumbler long.069</object-name> 
 	<property>/sim/input/selected/SelectedEngine738</property>
 	<factor>-30</factor>
 	<center>
-		<x-m>0.29427</x-m>
-		<y-m>0.03704</y-m>
-		<z-m>0.07808</z-m>
+		<x-m>0.035106</x-m>
+		<y-m>0.09446</y-m>
+		<z-m>0.251545</z-m>
 	</center>
 	<axis>
-		<x>1</x>
+		<y>0.4067366430758</y>
+		<z>0.913545457642601</z>
 	</axis>
 </animation>
 
