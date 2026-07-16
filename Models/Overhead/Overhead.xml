@@ -381,15 +381,15 @@
   <type>rotate</type>
   <object-name>thumbler long.061</object-name>
   <property>controls/lighting/strobe</property>
-  <factor>30</factor>
+  <factor>50</factor>
   <center>
-   <x-m>0.29527</x-m>
-   <y-m>0.18834</y-m>
-   <z-m>0.07835</z-m>
+   <x-m>0.188587</x-m>
+   <y-m>0.094413</y-m>
+   <z-m>0.251439</z-m>
  </center>
  <axis>
-   <x>0</x>
-   <y>1</y>
+   <x>1</x>
+   <y>0</y>
    <z>0</z>
  </axis>
 </animation>
@@ -1523,10 +1523,10 @@
 		<object-name>WINGLvalve.off</object-name>
 		<object-name>WINGRvalve.off</object-name>
 		<condition>
-			<equals>
+			<not-equals>
 				<property>controls/deice/wing-heat</property>
-				<value>0</value>
-			</equals>
+				<value>1</value>
+			</not-equals>
 		</condition>
 	</animation>
 	
@@ -1546,10 +1546,10 @@
 		<type>select</type>
 		<object-name>ENGLcowl.off</object-name>
 		<condition>
-			<equals>
+			<not-equals>
 				<property>controls/deice/lengine</property>
-				<value>0</value>
-			</equals>
+				<value>1</value>
+			</not-equals>
 		</condition>
 	</animation>
 	
@@ -1568,10 +1568,10 @@
 		<type>select</type>
 		<object-name>ENGRcowl.off</object-name>
 		<condition>
-			<equals>
+			<not-equals>
 				<property>controls/deice/rengine</property>
-				<value>0</value>
-			</equals>
+				<value>1</value>
+			</not-equals>
 		</condition>
 	</animation>
 	
@@ -2911,10 +2911,10 @@
 	<type>select</type>
 	<object-name>valveopen.off</object-name>
 	<condition>
-		<equals>
+		<not-equals>
 			<property>controls/fuel/Crossfeed</property>
-			<value>0</value>
-		</equals>
+			<value>1</value>
+		</not-equals>
 	</condition>
 </animation>
 <animation>
