@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-
+<!--
 <PropertyList>
    <path>landinglight.ac</path>
 
@@ -20,7 +20,7 @@
         <script>props.globals.getNode("controls/switches/switch").setBoolValue(1);</script>
       </binding>
 	</action>
-	<!--<center>
+	<center>
 		<x-m>0.285</x-m><z-m>-0.014</z-m>
 	</center>-->
 	<axis>
@@ -28,6 +28,4 @@
 	</axis>
 </animation>
 </PropertyList>
-   
-   
-   
+--> <!-- OLD LANDING LIGHTS. They are now integrated into the overhead panel. See Overhead/Overhead.xml line 635 (this line may change as code is added/removed)-->
