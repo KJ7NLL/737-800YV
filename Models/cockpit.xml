@@ -2052,7 +2052,7 @@
 
 <model>
   <name>ldglightleftretr</name>
-  <path>landinglight.xml</path>
+  <path>lights/landinglight.xml</path>
   <offsets>
     <x-m>0.6127471</x-m>
     <y-m>-0.2644771</y-m>
@@ -2062,7 +2062,7 @@
 </model>
 <model>
   <name>ldglightrightretr</name>
-  <path>landinglight.xml</path>
+  <path>lights/landinglight.xml</path>
   <offsets>
     <x-m>0.6127595</x-m>
     <y-m>-0.1857275</y-m>
@@ -2072,7 +2072,7 @@
 </model>
 <model>
   <name>ldglightleftwing</name>
-  <path>landinglight.xml</path>
+  <path>lights/landinglight.xml</path>
   <offsets>
     <x-m>0.6121518</x-m>
     <y-m>-0.2147996</y-m>
@@ -2083,7 +2083,7 @@
 
 <model>
   <name>ldglightrightwing</name>
-  <path>landinglight.xml</path>
+  <path>lights/landinglight.xml</path>
   <offsets>
     <x-m>0.6134001</x-m>
     <y-m>-0.2420656</y-m>
