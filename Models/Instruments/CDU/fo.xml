@@ -1144,18 +1144,6 @@
 	</action>
 </animation>
 
-<animation>
-	<type>pick</type>
-	<object-name>Btn.nav-rad</object-name>
-	<action>
-		<button>0</button>
-		<repeatable>false</repeatable>
-		<binding>
-			<command>nasal</command>
-			<script>cdu.key(1, 'nav_rad');</script>
-		</binding>
-	</action>
-</animation>
 
 <animation>
 	<type>pick</type>

@@ -37,6 +37,9 @@
 		<name>a320_a1s</name>
 		<mode>looped</mode>
 		<path>FL2070/abn1strt.wav</path>
+
+		<property>fl2070/sound/a1strt</property>
+
 		<volume>
 			<property>fl2070/sound/a1strt</property>
 			<offset>0</offset>
@@ -46,16 +49,19 @@
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
-	
+
 	<engine>
 		<name>a320_b1s</name>
 		<mode>looped</mode>
 		<path>FL2070/abn1strt.wav</path>
+
+		<property>fl2070/sound/b1strt</property>
+
 		<volume>
 			<property>fl2070/sound/b1strt</property>
 			<offset>0</offset>
@@ -65,9 +71,9 @@
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>0.0</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>0.0</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
